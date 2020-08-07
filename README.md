@@ -13,4 +13,5 @@ CRUD para duas entidades, despesa e receita. Controle de usuário, com registro,
 Swift 5  
 Firebase Auth  
 Firebase Database  
-Auto Layout com Stevia
+Auto Layout com Stevia  
+CocoaPods
