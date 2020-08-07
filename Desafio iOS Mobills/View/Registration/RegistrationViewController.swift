@@ -15,15 +15,16 @@ class RegistrationViewController: UIViewController {
     // MARK: - Properties
     
     private var viewModel = RegistrationViewModel()
-    private let viewBottom = UIView()
+    private let mainView = UIView()
+    private let mainLabel = UILabel()
     private let emailTextField = UITextField()
     private let passwordTextField = UITextField()
     private let name = UITextField()
     private let stackView = UIStackView()
-    private lazy var emailView = TextFieldView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: self.emailTextField, placeHolder: "Email")
-    private lazy var passwordView = TextFieldView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: self.passwordTextField, placeHolder: "Password", secure: true)
-    private lazy var usernameView = TextFieldView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: self.name, placeHolder: "Name")
-    private let buttonSignUp: UIButton = CustomButtom(title: "Sign Up")
+    private lazy var emailView = TextFieldView(textField: self.emailTextField, placeHolder: "Email")
+    private lazy var passwordView = TextFieldView(textField: self.passwordTextField, placeHolder: "Password", secure: true)
+    private lazy var usernameView = TextFieldView(textField: self.name, placeHolder: "Name")
+    private let buttonSignUp = CustomButtom(title: "Sign Up", color: #colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1))
     private let alreadyHaveAnAccountButton = UIButton()
     private let effectView = UIVisualEffectView()
     private let spinner = UIActivityIndicatorView()
@@ -36,9 +37,6 @@ class RegistrationViewController: UIViewController {
         viewModel.delegate = self
         setupView()
     }
-    
-    // MARK: - Functions
-    
     
     // MARK: - Selectors
     
@@ -90,13 +88,13 @@ extension RegistrationViewController: RegistrationViewModelDelegate {
 
 extension RegistrationViewController: ViewConfiguration {
     func buildView() {
-        stackView.addArrangedSubview(emailView)
-        stackView.addArrangedSubview(passwordView)
-        stackView.addArrangedSubview(usernameView)
-        stackView.addArrangedSubview(buttonSignUp)
         view.sv(
-            viewBottom,
-            stackView,
+            mainView,
+            mainLabel,
+            usernameView,
+            emailView,
+            passwordView,
+            buttonSignUp,
             alreadyHaveAnAccountButton
         )
     }
@@ -104,28 +102,36 @@ extension RegistrationViewController: ViewConfiguration {
     func addConstraint() {
         
         view.layout(
-            |-26-stackView.width(<=300).centerVertically(30).centerHorizontally()-26-|,
+            mainView.bottom(10%).right(12).left(12).top(10%),
             "",
-            viewBottom.bottom(-10).right(0).left(0).height(20%),
-//            alreadyHaveAnAccountButton.bottom(8%).centerHorizontally()
-            alignCenter(alreadyHaveAnAccountButton, with: viewBottom)
+            mainLabel.left(10%).top(20%),
+            "",
+            usernameView.left(10%).right(10%),
+            30,
+            emailView.left(10%).right(10%).centerInContainer(),
+            30,
+            passwordView.left(10%).right(10%),
+            20,
+            buttonSignUp.left(10%).right(10%),
+            "",
+            alreadyHaveAnAccountButton.bottom(12%).centerHorizontally()
         )
         
     }
     
     func additionalConfiguration() {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        viewBottom.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.3647058824, blue: 0.8980392157, alpha: 1)
-        viewBottom.layer.cornerRadius = 20
-        viewBottom.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        viewBottom.layer.shadowRadius = 8.0
-        viewBottom.layer.shadowOpacity = 0.7
-        viewBottom.layer.shadowOffset = .zero
+        mainView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        mainView.layer.cornerRadius = 20
+        mainView.addShadow(radius: 8.0)
+        mainLabel.text = "Sign Up"
+        mainLabel.font = UIFont.boldSystemFont(ofSize: 38)
         emailTextField.keyboardType = .emailAddress
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 10
         buttonSignUp.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        alreadyHaveAnAccountButton.setTitleColor(#colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1), for: .normal)
         alreadyHaveAnAccountButton.setTitle("Already have an account? Log In", for: .normal)
         alreadyHaveAnAccountButton.addTarget(self, action: #selector(handleHaveAnAccount), for: .touchUpInside)
         spinner.style = .whiteLarge

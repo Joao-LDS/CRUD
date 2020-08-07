@@ -13,12 +13,6 @@ class TextFieldView: UIView {
     
     // MARK: - Properties
     
-    private let view = UIView()
-    private let iconView = UIImageView()
-    private lazy var imageIcon: UIImage = {
-        let image = UIImage()
-        return image
-    }()
     private lazy var textField: UITextField = {
         let tf = UITextField()
         return tf
@@ -28,9 +22,8 @@ class TextFieldView: UIView {
     
     // MARK: - Init
     
-    init(image: UIImage, textField: UITextField, placeHolder: String, secure: Bool = false) {
+    init(textField: UITextField, placeHolder: String, secure: Bool = false) {
         super.init(frame: .zero)
-        self.imageIcon = image
         self.textField = textField
         self.placeHolder = placeHolder
         self.secure = secure
@@ -48,26 +41,25 @@ class TextFieldView: UIView {
 extension TextFieldView: ViewConfiguration {
     func buildView() {
         sv(
-            view,
-            iconView,
             textField
         )
     }
     
     func addConstraint() {
-        view.fillContainer().height(60)
+        height(60)
         layout(
-            iconView.left(22).centerVertically().size(24)-8-textField-12-|
+            |-textField-|.centerVertically()
         )
     }
     
     func additionalConfiguration() {
-        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5108109595)
-        view.layer.cornerRadius = 18
-        iconView.image = imageIcon
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        layer.cornerRadius = 8
+        addShadow(radius: 4.0)
         textField.placeholder = placeHolder
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        let color = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
+        textField.textColor = color
+        textField.attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: color])
         textField.isSecureTextEntry = secure
         textField.autocapitalizationType = .none
     }

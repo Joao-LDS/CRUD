@@ -56,11 +56,22 @@ class MainViewModel {
             self.entrys = entrys
             self.delegate?.reloadCollection()
         }
-//        EntryService.shared.fetchEntry { expenses in
-//            self.expenses = expenses
-//            DispatchQueue.main.async {
-//                completion(true)
-//            }
-//        }
+        DispatchQueue.main.async {
+            self.delegate?.reloadCollection()
+        }
+        
+    }
+    
+    func totalBalance() -> String {
+        var totalBalance = 0.0
+        for entry in entrys {
+            if entry.type == "revenue" {
+                totalBalance += entry.value
+            } else {
+                totalBalance -= entry.value
+            }
+        }
+        let total = String(totalBalance).replacingOccurrences(of: ".", with: ",")
+        return total
     }
 }

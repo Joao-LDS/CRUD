@@ -142,9 +142,9 @@
             filePath = "Desafio iOS Mobills/View/Main/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -414,8 +414,8 @@
             filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "handleCreate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -434,141 +434,13 @@
             endingLineNumber = "48"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6559046A-4F78-4E8E-97DE-15695D222CB6 - 4c8f5b2697518778"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Desafio_iOS_Mobills.MainViewController.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "380">
-               </Location>
-               <Location
-                  uuid = "6559046A-4F78-4E8E-97DE-15695D222CB6 - afb500016495a928"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Desafio_iOS_Mobills.MainViewController.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "89">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EFD39514-D0E4-43C2-B821-5511BCF30173"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "fetchEntry(forUser:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C75BE1F3-A103-42E7-B153-A1C0F5988153"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "fetchEntry(forUser:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "259DFCB3-CEF1-41FE-BE9E-5C9FD0197C46"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "fetchEntry(forUser:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "073770FE-D629-4363-B38E-643DDB927BDF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchEntry(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "073770FE-D629-4363-B38E-643DDB927BDF - 389142c9c044bd03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Desafio_iOS_Mobills.EntryService.fetchEntry(completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "99">
-               </Location>
-               <Location
-                  uuid = "073770FE-D629-4363-B38E-643DDB927BDF - d981034678920a5f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Desafio_iOS_Mobills.EntryService.fetchEntry(completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "159">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "15CA89FD-B236-4424-BA07-6CC7F618C77D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
@@ -578,45 +450,13 @@
             endingLineNumber = "50"
             landmarkName = "fetchUser()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "15CA89FD-B236-4424-BA07-6CC7F618C77D - bdd2b2cde98a6836"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Desafio_iOS_Mobills.User) -&gt; () in Desafio_iOS_Mobills.MainViewModel.fetchUser() -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "340">
-               </Location>
-               <Location
-                  uuid = "15CA89FD-B236-4424-BA07-6CC7F618C77D - d86858324eba4fc9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (Desafio_iOS_Mobills.User) -&gt; () in Desafio_iOS_Mobills.MainViewModel.fetchUser() -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9970CC64-07F5-421C-A57D-4313D367DD2A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
@@ -628,11 +468,26 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9970CC64-07F5-421C-A57D-4313D367DD2A - 72f6330772e3e406"
-                  shouldBeEnabled = "Yes"
+                  uuid = "9970CC64-07F5-421C-A57D-4313D367DD2A - df8c66d3808254c5"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Desafio_iOS_Mobills.MainViewModel.fetchEntry(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  symbolName = "Desafio_iOS_Mobills.MainViewModel.fetchEntry(forUser: Desafio_iOS_Mobills.User) -&gt; ()"
+                  moduleName = "Desafio iOS Mobills"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "9970CC64-07F5-421C-A57D-4313D367DD2A - d309fdb0abbc8df"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; () in Desafio_iOS_Mobills.MainViewModel.fetchEntry(forUser: Desafio_iOS_Mobills.User) -&gt; ()"
                   moduleName = "Desafio iOS Mobills"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewModel.swift"
@@ -640,22 +495,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
                   endingLineNumber = "56"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "9970CC64-07F5-421C-A57D-4313D367DD2A - 65f919e7252b8c29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; () in Desafio_iOS_Mobills.MainViewModel.fetchEntry(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "Desafio iOS Mobills"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/View/Main/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "204">
+                  offsetFromSymbolStart = "93">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -664,7 +504,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E8899765-8452-4414-8891-48AAA4DEBC1F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Desafio iOS Mobills/View/Main/MainViewModel.swift"
@@ -673,6 +513,310 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "fetchEntry(forUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC5A43A6-EBEF-49CE-92F2-4826F668FC47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "updateEntry(value:description:date:paid_received:type:uid:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7991446A-7A88-4C18-ADB1-E672A59E5567"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "updateEntry(value:description:date:paid_received:type:uid:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "372512FB-C708-4932-BCDF-38105D3E4B82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "updateEntry(value:description:date:paid_received:type:uid:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91BA8175-A6AB-473B-89B7-609B75E90824"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchEntrys(forUser:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91BA8175-A6AB-473B-89B7-609B75E90824 - a779de9aba3e1394"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Desafio_iOS_Mobills.EntryService.fetchEntrys(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Desafio iOS Mobills"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "91BA8175-A6AB-473B-89B7-609B75E90824 - 4fa341a649ba4ef3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Desafio_iOS_Mobills.EntryService.fetchEntrys(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Desafio iOS Mobills"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CBE336B-77C2-4AEF-896B-30B7A9A81C96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchEntrys(forUser:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CDF52F9-96B9-4471-B28D-B32FC44B216B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "handleCreate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8138BACD-3424-4976-A02C-ADE5AE39FCFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Main/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EA78D18-35A7-4FE4-A14D-EE4BA848ACB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "init(create:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27E21C23-F231-4DA7-B27D-278F971BEFB7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "init(edit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DD48B68-39FA-42A9-B1CA-602F3165A668"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "configureView(type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0CD5838-1E65-4B06-8FC7-15EA7A801B01"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/Service/EntryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "fetchEntrys(forUser:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0CD5838-1E65-4B06-8FC7-15EA7A801B01 - a779de9aba3e1394"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Desafio_iOS_Mobills.EntryService.fetchEntrys(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Desafio iOS Mobills"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "171">
+               </Location>
+               <Location
+                  uuid = "E0CD5838-1E65-4B06-8FC7-15EA7A801B01 - 4fa341a649ba4ef3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Desafio_iOS_Mobills.EntryService.fetchEntrys(forUser: Desafio_iOS_Mobills.User, completion: (Swift.Array&lt;Desafio_iOS_Mobills.Entry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Desafio iOS Mobills"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao.santos/Documents/Projects/Desafio%20iOS%20Mobills/Desafio%20iOS%20Mobills/Service/EntryService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96F06D20-CDC2-4147-A2B5-B96A0529FBFE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "init(edit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "390E46DF-8BFF-46B4-91DB-F392FB532367"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "EntryViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D175179-7AF5-41E9-B233-2FC44CE1C54E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "handleSegmentedControl(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F393922-0AF4-4E12-BD3C-A5B4E4E6BE40"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio iOS Mobills/View/Expense/EntryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "remove(expenseWith:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

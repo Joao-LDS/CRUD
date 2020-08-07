@@ -15,14 +15,14 @@ class LoginViewController: UIViewController {
     
     private let viewModel = LoginViewModel()
     private let mainView = UIView()
+    private let mainLabel = UILabel()
     private let emailTextField = UITextField()
     private let passwordTextField = UITextField()
-    private let stackView = UIStackView()
-    private lazy var emailView = TextFieldView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: self.emailTextField, placeHolder: "Email")
-    private lazy var passwordView = TextFieldView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: self.passwordTextField, placeHolder: "Password", secure: true)
+    private lazy var emailView = TextFieldView(textField: self.emailTextField, placeHolder: "Email")
+    private lazy var passwordView = TextFieldView(textField: self.passwordTextField, placeHolder: "Password", secure: true)
     private let forgotPassword = UIButton()
     private let dontHaveAnAccountButton = UIButton()
-    private let signInButton = CustomButtom(title: "Sign In")
+    private let signInButton = CustomButtom(title: "Sign In", color: #colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1))
     private let alert = Alert()
     
 
@@ -73,13 +73,13 @@ extension LoginViewController: LoginViewModelDelegate {
 
 extension LoginViewController: ViewConfiguration {
     func buildView() {
-        stackView.addArrangedSubview(emailView)
-        stackView.addArrangedSubview(passwordView)
-        stackView.addArrangedSubview(signInButton)
         view.sv(
             mainView,
-            stackView,
+            mainLabel,
+            emailView,
+            passwordView,
             forgotPassword,
+            signInButton,
             dontHaveAnAccountButton
         )
     }
@@ -88,10 +88,16 @@ extension LoginViewController: ViewConfiguration {
         view.layout(
             mainView.bottom(10%).right(12).left(12).top(10%),
             "",
-            |-26-stackView.width(<=300).centerInContainer()-26-|,
+            mainLabel.left(10%).top(20%),
             "",
-            forgotPassword.centerHorizontally(),
-            12,
+            emailView.left(10%).right(10%),
+            30,
+            passwordView.centerInContainer().left(10%).right(10%),
+            10,
+            forgotPassword.right(10%).height(20),
+            20,
+            signInButton.left(10%).right(10%),
+            "",
             dontHaveAnAccountButton.centerHorizontally().bottom(15%)
         )
     }
@@ -100,20 +106,16 @@ extension LoginViewController: ViewConfiguration {
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         mainView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         mainView.layer.cornerRadius = 20
-        mainView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        mainView.layer.shadowRadius = 8.0
-        mainView.layer.shadowOpacity = 0.7
-        mainView.layer.shadowOffset = .zero
+        mainView.addShadow(radius: 8.0)
+        mainLabel.text = "Sign In"
+        mainLabel.font = UIFont.boldSystemFont(ofSize: 38)
         emailTextField.keyboardType = .emailAddress
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
         signInButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
         forgotPassword.setTitle("Forgot password?", for: .normal)
-        forgotPassword.setTitleColor(.green, for: .normal)
+        forgotPassword.setTitleColor(#colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1), for: .normal)
         forgotPassword.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
-        dontHaveAnAccountButton.setTitle("Don't have an account? Sign In", for: .normal)
-        dontHaveAnAccountButton.setTitleColor(.blue, for: .normal)
+        dontHaveAnAccountButton.setTitle("Or sign In", for: .normal)
+        dontHaveAnAccountButton.setTitleColor(#colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1), for: .normal)
         dontHaveAnAccountButton.addTarget(self, action: #selector(handleDontHaveAnAccountButton), for: .touchUpInside)
         
     }

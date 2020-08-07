@@ -18,13 +18,18 @@ class MainViewController: UIViewController {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collection
     }()
+    private let topView = UIView()
+    private let bottomView = UIView()
     private let nameLabel = UILabel()
-    private let button = UIButton(type: .close)
-    private let revenueButton = CustomButtom(title: "Receita")
-    private let createExpenseButton = CustomButtom(title: "Despesa")
+    private let totalBalanceLabel = UILabel()
+    private let button = UIButton()
+    private let revenueButton = CustomButtom(title: "Receita", color: #colorLiteral(red: 0.5411764706, green: 0.7882352941, blue: 0.1490196078, alpha: 1))
+    private let expenseButton = CustomButtom(title: "Despesa", color: #colorLiteral(red: 1, green: 0.3490196078, blue: 0.368627451, alpha: 1))
     let viewModel = MainViewModel()
     private let spinner = UIActivityIndicatorView()
 
+    // MARK: - View Lifecicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -41,10 +46,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        guard let user = viewModel.user else {
-            print("Deu merda de novo.")
-            return
-        }
+        guard let user = viewModel.user else { return }
         self.viewModel.fetchEntry(forUser: user)
     }
     
@@ -86,11 +88,12 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewModelDelegate {
     func reloadCollection() {
         self.collection.reloadData()
+        totalBalanceLabel.text = "R$ \(viewModel.totalBalance())"
     }
     
     func configureUIWithUser(_ user: User) {
         self.configureActivity(on: false)
-        nameLabel.text = "\(user.name)"
+        nameLabel.text = "Olá \(user.name)"
     }
     
     func presentLogInView() {
@@ -102,10 +105,12 @@ extension MainViewController: MainViewModelDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
+
 extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: view.frame.height / 6)
+        return CGSize(width: collectionView.frame.width, height: view.frame.height / 8)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -120,9 +125,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let expense = viewModel.entrys[indexPath.row]
-        print(expense)
-        let vc = EntryViewController(edit: expense)
+        let entry = viewModel.entrys[indexPath.row]
+        let vc = EntryViewController(edit: entry)
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
@@ -135,35 +139,59 @@ extension MainViewController: ViewConfiguration {
     func buildView() {
         
         view.sv(
+            topView,
+            bottomView,
             nameLabel,
+            totalBalanceLabel,
             button,
             collection,
-            createExpenseButton,
+            expenseButton,
             revenueButton
         )
     }
     
     func addConstraint() {
         view.layout(
-            button.top(8%).left(6%),
+            button.top(8%).left(6%).size(40),
             "",
-            nameLabel.top(8%).centerHorizontally(),
-            40,
+            nameLabel.top(8%).centerHorizontally().height(40),
+            16,
+            totalBalanceLabel.centerHorizontally().height(30),
+            "",
+            |-topView.top(-20)-|.height(<=200) ,
+            20,
             |-16-collection-16-|,
             16,
-            |-16-createExpenseButton.bottom(5%).width(40%),
+            |-22-expenseButton.bottom(5%).width(40%),
             "",
-            revenueButton.bottom(5%).width(40%)-16-|
+            revenueButton.bottom(5%).width(40%)-22-|,
+            "",
+            |-bottomView.height(12%).bottom(-20)-|.height(<=100)
         )
     }
     
     func additionalConfiguration() {
         view.backgroundColor = .white
-        nameLabel.textColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+        topView.addShadow(radius: 8.0)
+        topView.backgroundColor = .white
+        topView.layer.cornerRadius = 20
+        bottomView.backgroundColor = .white
+        bottomView.addShadow(radius: 8.0)
+        bottomView.layer.cornerRadius = 20
+        nameLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 28)
+        totalBalanceLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        totalBalanceLabel.font = UIFont.boldSystemFont(ofSize: 28)
         button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
-        createExpenseButton.addTarget(self, action: #selector(handleCreateExpense), for: .touchUpInside)
+        button.setImage(#imageLiteral(resourceName: "icon-close"), for: .normal)
+        button.imageView?.left(10)
+        expenseButton.addTarget(self, action: #selector(handleCreateExpense), for: .touchUpInside)
+        expenseButton.title = "Despesa"
+        expenseButton.addShadow(radius: 4.0)
         revenueButton.addTarget(self, action: #selector(handleCreateRevenue), for: .touchUpInside)
-        spinner.style = .medium
+        revenueButton.title = "Receita"
+        revenueButton.addShadow(radius: 4.0)
+        spinner.style = .gray
         collection.register(CustomCell.self, forCellWithReuseIdentifier: "cell")
         collection.backgroundColor = .clear
     }

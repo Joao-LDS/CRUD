@@ -9,8 +9,6 @@
 import Firebase
 
 class AuthFirebase {
-
-    // MARK: - Firebase Sign In
     
     func logUserIn(withEmail email:String, password: String, completion: AuthDataResultCallback?) {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)

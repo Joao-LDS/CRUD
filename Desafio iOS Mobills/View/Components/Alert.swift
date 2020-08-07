@@ -11,6 +11,8 @@ import Stevia
 
 class Alert: UIView {
     
+    // MARK: - Properties
+    
     let viewModel = AlertViewModel()
     private let labelTitle = UILabel()
     private let labelMessage = UILabel()
@@ -18,6 +20,8 @@ class Alert: UIView {
     private let tf =  UITextField()
     private let okButton = UIButton(type: .system)
     private let cancelButton = UIButton(type: .system)
+    
+    // MARK: - Init
     
     init() {
         super.init(frame: .zero)
@@ -27,6 +31,8 @@ class Alert: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Functions
     
     func configureShowAlert(view: UIView, title: String, message: String) {
         view.sv(self)
@@ -73,6 +79,8 @@ class Alert: UIView {
         Animation().animationToPresent(view: self)
     }
     
+    // MARK: - Selectors
+    
     @objc func dismiss() {
         Animation().animationToDismiss(view: self)
     }
@@ -92,6 +100,8 @@ class Alert: UIView {
     
 }
 
+// MARK: - ViewConfiguration
+
 extension Alert: ViewConfiguration {
     func buildView() {
         sv(
@@ -105,21 +115,22 @@ extension Alert: ViewConfiguration {
     func addConstraint() {}
     
     func additionalConfiguration() {
-        backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.8033945863)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        addShadow(radius: 4.0)
         layer.cornerRadius = 10
-        labelTitle.textColor = .white
+        labelTitle.textColor = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
         labelTitle.font = UIFont.boldSystemFont(ofSize: 18)
         labelMessage.textAlignment = .center
-        labelMessage.textColor = .white
-        line.backgroundColor = .white
+        labelMessage.textColor = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
+        line.backgroundColor = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
         okButton.setTitle("OK", for: .normal)
-        okButton.tintColor = .white
+        okButton.tintColor = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
         cancelButton.setTitle("Cancel", for: .normal)
-        cancelButton.tintColor = .white
+        cancelButton.tintColor = #colorLiteral(red: 0.6784313725, green: 0.7098039216, blue: 0.7411764706, alpha: 1)
         tf.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tf.autocapitalizationType = .none
         tf.layer.cornerRadius = 4
-        tf.layer.borderColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        tf.layer.borderColor = #colorLiteral(red: 1, green: 0.7921568627, blue: 0.2274509804, alpha: 1)
         tf.layer.borderWidth = 1
         tf.placeholder = "Email"
         tf.textAlignment = .center

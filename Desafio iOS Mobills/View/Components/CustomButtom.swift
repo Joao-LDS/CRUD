@@ -11,11 +11,13 @@ import Stevia
 
 class CustomButtom: UIButton {
 
-    private var title = ""
+    var title = ""
+    var color: UIColor?
     
-    init(title: String) {
+    init(title: String, color: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)) {
         super.init(frame: .zero)
         self.title = title
+        self.color = color
         setupView()
     }
     
@@ -34,7 +36,7 @@ extension CustomButtom: ViewConfiguration {
     
     func additionalConfiguration() {
         setTitle(title, for: .normal)
-        backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.3647058824, blue: 0.8980392157, alpha: 1)
+        backgroundColor = color
         layer.cornerRadius = 18
     }
     
