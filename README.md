@@ -1,4 +1,4 @@
-# Desafio iOS Mobills
+# CRUD
 
 CRUD para duas entidades, despesa e receita. Controle de usuário, com registro, reset de password, verificação de e-mail e login.
 
